@@ -1,0 +1,19 @@
+title: Network Usage eth0
+vtitle: Bits
+area: first
+
+fields:
+    up_eth0:
+        color: blue
+        alias: Out
+        scale: '8'
+        data: sumSeries(net.i-023c9916.log.monitoring.ops.dev.sa-east-1.titansgroup.net.*.tx_bytes)
+        cacti_style: si
+
+    down_eth0:
+        color: green
+        alias: Down
+        scale: '8'
+        data: sumSeries(net.i-023c9916.log.monitoring.ops.dev.sa-east-1.titansgroup.net.*.rx_bytes)
+        cacti_style: si
+

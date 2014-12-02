@@ -1,0 +1,28 @@
+title: Memory Usage
+vtitle: Bytes
+area: stacked
+
+fields:
+    used:
+        color: red
+        alias: Used
+        data: sumSeries(memory.i-023c9916.log.monitoring.ops.dev.sa-east-1.titansgroup.net.used)
+        cacti_style: si
+
+    buffered:
+        color: purple
+        alias: Buffered
+        data: sumSeries(memory.i-023c9916.log.monitoring.ops.dev.sa-east-1.titansgroup.net.buffers)
+        cacti_style: si
+
+    cached:
+        color: blue
+        alias: Cached
+        data: sumSeries(memory.i-023c9916.log.monitoring.ops.dev.sa-east-1.titansgroup.net.cached)
+        cacti_style: si
+
+    free:
+        color: green
+        alias: Free
+        data: sumSeries(collectd.server-1.memory.memory.free.value)
+        cacti_style: si

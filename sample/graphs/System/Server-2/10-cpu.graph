@@ -1,0 +1,20 @@
+title: Combined CPU Usage
+vtitle: percent
+area: stacked
+description: The combined CPU usage
+
+fields:
+    iowait: 
+        alias: IO Wait
+        data: sumSeries(*.i-023c9916.log.monitoring.ops.dev.sa-east-1.titansgroup.net.cpu.iowait)
+        cacti_style: si
+
+    system:
+        alias: System
+        data: sumSeries(*.i-023c9916.log.monitoring.ops.dev.sa-east-1.titansgroup.net.cpu.system)
+        cacti_style: si
+
+    user:
+        alias: User
+        data: sumSeries(*.i-023c9916.log.monitoring.ops.dev.sa-east-1.titansgroup.net.cpu.user)
+        cacti_style: si

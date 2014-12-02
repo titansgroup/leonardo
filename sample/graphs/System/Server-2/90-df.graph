@@ -1,0 +1,21 @@
+title: Disk Usage
+vtitle: "%"
+description: Disk Usage for server-1
+area: stacked
+linewidth: 0.8
+area_alpha: 0.7
+
+fields:
+    used:
+        color: orange
+        alias: Used
+        data: sumSeries(disk-usage.i-023c9916.log.monitoring.ops.dev.sa-east-1.titansgroup.net.*.used_percentage)
+        cacti_style: si
+
+    free:
+        color: green
+        alias: Available
+        data: sumSeries(disk-usage.i-023c9916.log.monitoring.ops.dev.sa-east-1.titansgroup.net.*.avail)
+        cacti_style: si
+
+

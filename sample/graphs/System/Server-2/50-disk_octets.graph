@@ -1,0 +1,16 @@
+title: Disk [/dev/sda] Octets
+vtitle: Bytes/s
+description: Disk Merged for server-1
+
+
+fields:
+    read:
+        color: blue
+        data: sumSeries(disk.i-023c9916.log.monitoring.ops.dev.sa-east-1.titansgroup.net.*.sectorsRead)
+        cacti_style: si
+
+    write:
+        color: green
+        data: sumSeries(disk.i-023c9916.log.monitoring.ops.dev.sa-east-1.titansgroup.net.*.writesMerged)
+        cacti_style: si
+
